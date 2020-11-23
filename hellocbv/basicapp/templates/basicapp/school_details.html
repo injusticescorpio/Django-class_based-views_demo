@@ -1,0 +1,19 @@
+{%extends "basicapp/newbase.html"%}
+{%block body_block%}
+
+<div class="jumbotron">
+  <h1>Welcome to the School Details page</h1>
+  <h2>School details:</h2>
+  <p>Name :{{school_details.name}}</p>
+  <p>Principal :{{school_details.principal}}</p>
+  <p>Location :{{school_details.location}}</p>
+  <h3>Students :</h3>
+  {%for i in school_details.students.all%}
+  <!-- here the students in the students.all is come from the realted_name of model.py it will connecting ForeignKey with School and Student
+  in models.py -->
+  <p>{{i.name}} who is {{i.age}}</p>
+
+  {%endfor%}
+</div>
+
+{%endblock%}

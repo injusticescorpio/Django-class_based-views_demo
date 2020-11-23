@@ -1,0 +1,9 @@
+{%extends "basicapp/newbase.html"%}
+{%block body_block%}
+<h1>Welcome to list of schools</h1>
+<ol>
+  {%for i in school%}
+  <h2><li><a href="{{i.id}}">{{i.name}}</a></li></h2>
+  {%endfor%}
+</ol>
+{%endblock%}
